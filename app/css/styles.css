@@ -1,0 +1,122 @@
+/* Estilo del encabezado */
+header {
+    background-color: #0058A0; /* Color de fondo azul */
+    color: #FFF; /* Texto en blanco */
+    display: grid; /* Usar CSS Grid para dividir el encabezado en dos columnas */
+    grid-template-columns: 1fr 1fr; /* Dividir el encabezado en dos columnas de igual tamaño */
+    align-items: center; /* Centra verticalmente los elementos en el encabezado */
+    padding: 20px;
+}
+
+/* Estilo del mensaje de bienvenida */
+.welcome-message {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Estilos para enlaces sin decoración */
+.no-link-decoration {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #ffffff; /* Color del texto del enlace personalizado */
+    /* Otros estilos personalizados, como el color de fondo, si es necesario */
+}
+
+/* Estilo del menú de navegación */
+nav ul {
+    /*background-color: #333;  Color de fondo gris oscuro */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right; /* Alinea el menú de navegación a la derecha */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFF; /* Texto en blanco */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #FF4500; /* Color de fondo naranja */
+}
+
+/* Estilo del contenido principal */
+main {
+    padding: 20px;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #0058A0; /* Color de fondo azul */
+    color: #FFF; /* Texto en blanco */
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* Fija el pie de página */
+    bottom: 0; /* Lo coloca en la parte inferior de la ventana */
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+}
+
+
+/*** CSS de los forms de login & register ***/
+/* Estilo del formulario */
+form {
+    text-align: center;
+    margin: auto;
+    width: 50%; /* Ancho del formulario */
+    padding: 20px;
+    background-color: #F2F2F2; /* Color de fondo gris claro */
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo de los campos de entrada */
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+}
+
+/* Estilo del botón de envío */
+form input[type="submit"],
+form input[type="button"] {
+    background-color: #0058A0; /* Color de fondo azul */
+    color: #FFF; /* Texto en blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo del botón de registro */
+.login-register-button {
+    display: block;
+    background-color: #0058A0;
+    color: #FFF;
+    border: none;
+    padding: 10px 0;
+    width: 20%;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto; /* Centra horizontalmente el botón */
+}
+
+/* Estilo del mensaje de error */
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Estilo del mensaje de éxito */
+.success-message {
+    color: green;
+    margin-top: 10px;
+}
