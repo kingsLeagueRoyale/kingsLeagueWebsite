@@ -5,22 +5,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Reglas del Sitio</title>
-    <style>
-        /* Estilos para dar formato a las reglas */
-        .regla {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-        }
-    </style>
+    <title>Kings League</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Reglas de la Kings League</h1>
+        <?php
+            if (isset($_SESSION['username'])) {
+                $username = $_SESSION['username'];
+                echo "<h1>Bienvenido $username a la <a class='no-link-decoration' href='index.php'>Kings League</a></h1>";
+            } else {
+                echo "<h1>Bienvenido a la <a class='no-link-decoration' href='index.php'>Kings League</a></h1>";
+            }
+        ?>
+        <nav>
+            <ul>
+                <li><a href="calendario.php">Calendario</a></li>
+                <li><a href="mi_perfil.php">Mi Perfil</a></li>
+                <li><a href="reglas.php">Reglas</a></li>
+                <?php
+                    if (isset($_SESSION['username'])) {
+                        // Si hay una sesión iniciada, mostrar la opción de "Mi Perfil"
+                        echo '<li><a href="connection/logout.php">Cerrar Sesión</a></li>';
+                    } else {
+                        // Si no hay sesión iniciada, mostrar la opción de "Iniciar Sesión"
+                        echo '<li><a href="login_form.php">Iniciar Sesión</a></li>';
+                    }
+                ?>
+            </ul>
+        </nav>
     </header>
+
+    <main>
+        <h2>Reglas</h2>
+        <p>En esta sección se mostrarán las reglas</p>
+    </main>
 
     <section>
         <div class="regla">
@@ -39,7 +58,7 @@
     <!-- Resto del contenido de la página -->
 
     <footer>
-        <!-- Tu pie de página aquí -->
+        <p> Copyright &copy; 2023 , Kikus </p>
     </footer>
 </body>
 </html>

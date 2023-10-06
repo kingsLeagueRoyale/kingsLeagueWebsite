@@ -47,43 +47,44 @@
 
     <!-- Formulario de Inicio de Sesión -->
     <form id="login-form" action="connection/login.php" method="POST">
-        <label for="login_username">Nombre de usuario o correo electrónico:</label>
-        <input type="text" id="login_username" name="login_username" required><br><br>
+    <div><label for="login_username">Nombre de usuario o correo electrónico:</label></div>
+    <div><input type="text" id="login_username" name="login_username" required><br><br></div>
 
-        <label for="login_password">Contraseña:</label>
-        <input type="password" id="login_password" name="login_password" required><br><br>
+    <div><label for="login_password">Contraseña:</label></div>
+    <div><input type="password" id="login_password" name="login_password" required><br><br></div>
 
-        <input type="submit" value="Iniciar Sesión">
+    <div><input type="submit" value="Iniciar Sesión"></div>
     </form>
-
-    <hr>
 
     <!-- Botón para mostrar el formulario de registro -->
     <input class="login-register-button" id="register-button" type="button" value="Registrarse como nuevo usuario" onclick="mostrarFormularioRegistro()">
 
     <!-- Formulario de Registro (inicialmente oculto) -->
     <form id="register-form" action="connection/register.php" method="POST" style="display: none;" onsubmit="return validarRegistro();">
-        <label for="register_username">Nombre de usuario:</label>
-        <input type="text" id="register_username" name="register_username" required><br><br>
+        <div><label for="register_username">Nombre de usuario:</label></div>
+        <div><input type="text" id="register_username" name="register_username" required><br><br></div>
 
-        <label for="register_email">Correo electrónico:</label>
-        <input type="email" id="register_email" name="register_email" required><br><br>
+        <div><label for="register_email">Correo electrónico:</label></div>
+        <div><input type="email" id="register_email" name="register_email" required><br><br></div>
 
-        <label for="register_password">Contraseña:</label>
-        <input type="password" id="register_password" name="register_password" required><br><br>
+        <div><label for="register_password">Contraseña:</label></div>
+        <div><input type="password" id="register_password" name="register_password" required><br><br></div>
 
-        <label for="confirm_password">Confirmar Contraseña:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+        <div><label for="confirm_password">Confirmar Contraseña:</label></div>
+        <div><input type="password" id="confirm_password" name="confirm_password" required><br><br></div>
 
-        <input type="submit" value="Registrar">
+        <div><input type="submit" value="Registrar"></div>
     </form>
 
     <!-- Botón para mostrar el formulario de login -->
     <input class="login-register-button" id="login-button" type="button" value="Volver a Iniciar Sesión" onclick="mostrarFormularioLogin()">
 
-<!-- Contenedor para mostrar mensajes de error -->
-<div id="error-container" style="color: red;"></div>
+    <!-- Contenedor para mostrar mensajes de error -->
+    <div id="error-container" style="color: red;"></div>
 
+    <footer>
+            <p> Copyright &copy; 2023 , Kikus </p>
+    </footer>
 
 </body>
 </html>

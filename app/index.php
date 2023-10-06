@@ -1,5 +1,23 @@
 <?php
     session_start();
+
+    // Incluye la función conectarDB
+    require_once "connection/connection.php"; // Asegúrate de especificar la ruta correcta
+    require_once "teams/create_teams.php";
+
+    // Llama a la función conectarDB para obtener la conexión
+    $conn = conectarDB();
+
+    // Consulta SQL para obtener la lista de equipos
+    $sql = "SELECT team_code, name FROM team";
+    $result = $conn->query($sql);
+
+    // Verifica si la consulta se ejecutó correctamente
+    if (!$result) {
+        die("Error en la consulta: " . $conn->error);
+    }
+    crearPaginasEquipos();
+
 ?>
 
 <!DOCTYPE html>
@@ -36,17 +54,30 @@
         </nav>
     </header>
 
-    
-
     <main>
         <section>
             <h2>¡Explora nuestro sitio!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla massa vel risus posuere, ac vulputate libero tincidunt. Suspendisse potenti. Vestibulum ac est id lectus bibendum vulputate. Quisque hendrerit efficitur mi, at iaculis massa ullamcorper in. Fusce sit amet suscipit sapien. Phasellus eleifend justo at tortor hendrerit, vel iaculis erat malesuada. Nulla facilisi. In eget justo ipsum.</p>
         </section>
+        
+        <section>
+            <h2>Equipos</h2>
+            <ul>
+                <?php
+                    // Itera a través de los resultados de la consulta para mostrar la lista de equipos
+                    while ($row = $result->fetch_assoc()) {
+                        $codigo_equipo = $row["team_code"];
+                        $nombre_equipo = $row["name"];
+                        // Muestra el nombre del equipo y su código en línea
+                        echo "<li><a href='teams/$codigo_equipo.php'>$nombre_equipo <span>- $codigo_equipo</span></a></li>";
+                    }
+                ?>
+            </ul>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Mi Sitio Web</p>
+        <p> Copyright &copy; 2023 , Kikus </p>
     </footer>
 </body>
 </html>
