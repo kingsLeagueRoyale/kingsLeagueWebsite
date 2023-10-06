@@ -2,7 +2,7 @@
     session_start();
 
     // Incluye la función conectarDB
-    require_once "connection/connection.php"; // Asegúrate de especificar la ruta correcta
+    require_once "connection/connection.php"; // Asegúrate de especificar la ruta correcta madafaka
 
     // Llama a la función conectarDB para obtener la conexión
     $conn = conectarDB();
