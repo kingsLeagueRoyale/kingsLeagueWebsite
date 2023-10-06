@@ -3,7 +3,6 @@
 
     // Incluye la función conectarDB
     require_once "connection/connection.php"; // Asegúrate de especificar la ruta correcta
-    require_once "teams/create_teams.php";
 
     // Llama a la función conectarDB para obtener la conexión
     $conn = conectarDB();
@@ -16,7 +15,6 @@
     if (!$result) {
         die("Error en la consulta: " . $conn->error);
     }
-    crearPaginasEquipos();
 
 ?>
 
@@ -68,8 +66,8 @@
                     while ($row = $result->fetch_assoc()) {
                         $codigo_equipo = $row["team_code"];
                         $nombre_equipo = $row["name"];
-                        // Muestra el nombre del equipo y su código en línea
-                        echo "<li><a href='teams/$codigo_equipo.php'>$nombre_equipo <span>- $codigo_equipo</span></a></li>";
+                        // Enlace al equipo con información enviada como parámetros GET
+                        echo "<li><a href='team/team_details.php?codigo_equipo=$codigo_equipo'>$nombre_equipo <span>- $codigo_equipo</span></a></li>";
                     }
                 ?>
             </ul>
