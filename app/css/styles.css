@@ -1,7 +1,6 @@
-/* Estilo del encabezado */
 header {
-    background-color: #0058A0; /* Color de fondo azul */
-    color: #FFF; /* Texto en blanco */
+    background-color: #003253; /* Color de fondo azul */
+    color: #000000; /* Texto en blanco */
     display: grid; /* Usar CSS Grid para dividir el encabezado en dos columnas */
     grid-template-columns: 1fr 1fr; /* Dividir el encabezado en dos columnas de igual tamaño */
     align-items: center; /* Centra verticalmente los elementos en el encabezado */
@@ -46,6 +45,7 @@ nav ul li a {
 /* Estilo del contenido principal */
 main {
     padding: 20px;
+    background-color: linear-gradient(to bottom, #ff0224, #00325300)
 }
 
 /* Estilo del pie de página */
@@ -143,7 +143,7 @@ form input[type="button"] {
 
 /* Estilos para la tabla */
 #th-list_players {
-    background-color: #f2f2f2; /* Color de fondo del encabezado */
+    background-color: linear-gradient(to bottom, #ff0224, #00325300); /* Color de fondo del encabezado */
     font-weight: bold; /* Texto en negrita en el encabezado */
 }
 

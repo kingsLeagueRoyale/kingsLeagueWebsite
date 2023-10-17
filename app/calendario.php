@@ -39,7 +39,7 @@
         <h2>Calendario</h2>
         <p>En esta sección se mostrará el calendario de partidos de la liga.</p>
     </main>
-    <footer>
+<footer>
         <p> Copyright &copy; 2023 , Kikus </p>
     </footer>
 </body>
