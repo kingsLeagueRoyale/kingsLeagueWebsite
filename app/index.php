@@ -40,8 +40,14 @@
                 <li><a href="mi_perfil.php">Mi Perfil</a></li>
                 <li><a href="reglas.php">Reglas</a></li>
                 <?php
+                    if ($_SESSION['role'] == 'admin') {
+                        // Si el rol es administrador, mostrar la opción de "Administrar"
+                        echo '<li><a href="admin/main_admin.php">Administrar</a></li>';
+                    }
+                ?>
+                <?php
                     if (isset($_SESSION['username'])) {
-                        // Si hay una sesión iniciada, mostrar la opción de "Mi Perfil"
+                        // Si hay una sesión iniciada, mostrar la opción de "Cerrar Sesión"
                         echo '<li><a href="connection/logout.php">Cerrar Sesión</a></li>';
                     } else {
                         // Si no hay sesión iniciada, mostrar la opción de "Iniciar Sesión"
@@ -57,6 +63,10 @@
             <h2>¡Explora nuestro sitio!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla massa vel risus posuere, ac vulputate libero tincidunt. Suspendisse potenti. Vestibulum ac est id lectus bibendum vulputate. Quisque hendrerit efficitur mi, at iaculis massa ullamcorper in. Fusce sit amet suscipit sapien. Phasellus eleifend justo at tortor hendrerit, vel iaculis erat malesuada. Nulla facilisi. In eget justo ipsum.</p>
         </section>
+
+        <div id="troll-button-container">
+            <button id="troll-button" onmouseover="moveTrollButton()">ACTIVAR MODO DIOS</button>
+        </div>
         
         <section>
             <h2>Equipos</h2>
@@ -77,5 +87,6 @@
     <footer>
         <p> Copyright &copy; 2023 , Kikus </p>
     </footer>
+    <script src="js/troll.js"></script>
 </body>
 </html>

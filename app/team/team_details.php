@@ -62,16 +62,16 @@ if (!$result_jugadores) {
         ?>
         <nav>
             <ul>
-                <li><a href="calendario.php">Calendario</a></li>
-                <li><a href="mi_perfil.php">Mi Perfil</a></li>
-                <li><a href="reglas.php">Reglas</a></li>
+                <li><a href="../calendario.php">Calendario</a></li>
+                <li><a href="../mi_perfil.php">Mi Perfil</a></li>
+                <li><a href="../reglas.php">Reglas</a></li>
                 <?php
                     if (isset($_SESSION['username'])) {
                         // Si hay una sesión iniciada, mostrar la opción de "Mi Perfil"
-                        echo '<li><a href="connection/logout.php">Cerrar Sesión</a></li>';
+                        echo '<li><a href="../connection/logout.php">Cerrar Sesión</a></li>';
                     } else {
                         // Si no hay sesión iniciada, mostrar la opción de "Iniciar Sesión"
-                        echo '<li><a href="login_form.php">Iniciar Sesión</a></li>';
+                        echo '<li><a href="../login_form.php">Iniciar Sesión</a></li>';
                     }
                 ?>
             </ul>

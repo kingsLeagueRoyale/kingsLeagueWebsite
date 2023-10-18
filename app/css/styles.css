@@ -182,3 +182,112 @@ form input[type="button"] {
         width: 100%; /* Ancho completo en dispositivos móviles */
     }
 }
+
+
+/* ESTILOS PARA LAS TABLAS DE CALENDARIO */
+#h3-date-calendar {
+    text-align: center;
+    font-weight: bold;
+}
+#th-calendar {
+    background-color: linear-gradient(to bottom, #ff0224, #00325300); /* Color de fondo del encabezado */
+    font-weight: bold; /* Texto en negrita en el encabezado */
+    width: 80%; /* Ancho de la tabla (ajusta según tus necesidades) */
+    margin: 0 auto; /* Centrar horizontalmente la tabla */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-collapse: collapse; /* Colapsar bordes de celda */
+}
+
+/* Estilos para filas pares e impares (alternar colores) */
+#th-calendar tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo de filas pares */
+}
+
+#th-calendar tr:nth-child(odd) {
+    background-color: #ffffff; /* Color de fondo de filas impares */
+}
+
+/* Estilos para las celdas */
+#th-calendar th,
+#th-calendar td {
+    padding: 10px; /* Espaciado interno en celdas */
+    text-align: center; /* Alineación centrada del texto en celdas */
+    border: 1px solid #dddddd; /* Borde de celdas */
+}
+
+/* Estilos para encabezados y celdas específicas (personaliza según tus necesidades) */
+#th-calendar th {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto en el encabezado */
+}
+
+
+/* ESTILOS PARA EL PANEL PRINCIPAL DE ADMINISTRACIÓN */
+#admin-panel-header {
+    font-size: 250%;
+    text-align: center;
+}
+
+#admin-panel-options {
+    display: flex;
+    justify-content: space-between;
+    
+    :hover {
+        background-color: #0060a0;
+    }
+}
+
+.admin-option {
+    width: 30%; /* Ajusta el ancho de cada opción según tus necesidades */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border: 1px solid #ccc; /* Agrega bordes para separar las opciones */
+    border-radius: 8px; /* Esquinas redondeadas */
+    background-color: #3498db; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Sombra */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.admin-option a {
+    font-size: 150%;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5; /* Espaciado entre líneas del texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#troll-button {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+#troll-button-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

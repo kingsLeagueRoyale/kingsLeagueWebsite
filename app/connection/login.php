@@ -18,12 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // El usuario existe en la base de datos
         $row = $result->fetch_assoc();
         $stored_password = $row["password"];
+        $role = $row["role"];
 
         // Verificar si la contraseña es correcta
         if (password_verify($login_password, $stored_password)) {
             // Las credenciales son válidas, establecer la variable de sesión 'username'
             session_start();
             $_SESSION['username'] = $login_username; // Establecer el nombre de usuario en la variable de sesión
+            $_SESSION['role'] = $role; // Establecer el rol en la variable de sesión
             header("Location: ../index.php");
             exit();
         } else {
