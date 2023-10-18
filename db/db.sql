@@ -329,7 +329,7 @@ ALTER TABLE `matches`
   ADD CONSTRAINT `fk_visitor_team` FOREIGN KEY (`visitor_team_code`) REFERENCES `team` (`team_code`);
 
 --
--- Filtros para la tabla `player`
+-- Filtro para la tabla `player`
 --
 ALTER TABLE `player`
   ADD CONSTRAINT `player_ibfk_1` FOREIGN KEY (`team_code`) REFERENCES `team` (`team_code`);
