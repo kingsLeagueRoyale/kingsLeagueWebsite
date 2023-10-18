@@ -102,12 +102,8 @@ if (!$result_jugadores) {
                     <thead id="th-list_players">
                         <tr>
                             <th>Nombre</th>
-                            <th>Apellido1</th>
-                            <th>Apellido2</th>
-                            <th>Nickname</th>
+                            <th>Apellido</th>
                             <th>Edad</th>
-                            <th>Altura</th>
-                            <th>Peso</th>
                             <th>Posición</th>
                             <!-- Agrega más encabezados según las columnas que desees mostrar -->
                         </tr>
@@ -118,11 +114,7 @@ if (!$result_jugadores) {
                             echo "<tr>";
                             echo "<td>{$jugador_row['first_name']}</td>";
                             echo "<td>{$jugador_row['last_name1']}</td>";
-                            echo "<td>{$jugador_row['last_name2']}</td>";
-                            echo "<td>{$jugador_row['nickname']}</td>";
                             echo "<td>{$jugador_row['age']}</td>"; // Muestra la edad
-                            echo "<td>{$jugador_row['height']}</td>"; // Muestra la altura
-                            echo "<td>{$jugador_row['weight']}</td>"; // Muestra el peso
                             echo "<td>{$jugador_row['position']}</td>"; // Muestra la posición
                             // Agrega más columnas según los datos que desees mostrar
                             echo "</tr>";
