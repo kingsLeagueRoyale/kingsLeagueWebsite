@@ -20,16 +20,16 @@
         <?php
             if (isset($_SESSION['username'])) {
                 $username = $_SESSION['username'];
-                echo "<h1>Bienvenido $username a la <a class='no-link-decoration' href='index.php'>Kings League</a></h1>";
+                echo "<h1>Bienvenido $username a la <a class='no-link-decoration' href='../index.php'>Kings League</a></h1>";
             } else {
-                echo "<h1>Bienvenido a la <a class='no-link-decoration' href='index.php'>Kings League</a></h1>";
+                echo "<h1>Bienvenido a la <a class='no-link-decoration' href='../index.php'>Kings League</a></h1>";
             }
         ?>
         <nav>
             <ul>
-                <li><a href="calendario.php">Calendario</a></li>
-                <li><a href="mi_perfil.php">Mi Perfil</a></li>
-                <li><a href="reglas.php">Reglas</a></li>
+                <li><a href="../calendario.php">Calendario</a></li>
+                <li><a href="../mi_perfil.php">Mi Perfil</a></li>
+                <li><a href="../reglas.php">Reglas</a></li>
                 <?php
                     if ($_SESSION['role'] == 'admin') {
                         // Si el rol es administrador, mostrar la opción de "Administrar"

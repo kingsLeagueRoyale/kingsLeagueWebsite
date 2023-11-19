@@ -1,3 +1,7 @@
+body {
+    background: linear-gradient(to left, #02bcff, #011b2c);
+}
+
 header {
     background-color: #003253; /* Color de fondo azul */
     color: #000000; /* Texto en blanco */
